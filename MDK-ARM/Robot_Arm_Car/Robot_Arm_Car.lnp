@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"robot_arm_car\startup_stm32f103x6.o"
+"robot_arm_car\main.o"
+"robot_arm_car\gpio.o"
+"robot_arm_car\tim.o"
+"robot_arm_car\stm32f1xx_it.o"
+"robot_arm_car\stm32f1xx_hal_msp.o"
+"robot_arm_car\stm32f1xx_hal_gpio_ex.o"
+"robot_arm_car\stm32f1xx_hal_tim.o"
+"robot_arm_car\stm32f1xx_hal_tim_ex.o"
+"robot_arm_car\stm32f1xx_hal.o"
+"robot_arm_car\stm32f1xx_hal_rcc.o"
+"robot_arm_car\stm32f1xx_hal_rcc_ex.o"
+"robot_arm_car\stm32f1xx_hal_gpio.o"
+"robot_arm_car\stm32f1xx_hal_dma.o"
+"robot_arm_car\stm32f1xx_hal_cortex.o"
+"robot_arm_car\stm32f1xx_hal_pwr.o"
+"robot_arm_car\stm32f1xx_hal_flash.o"
+"robot_arm_car\stm32f1xx_hal_flash_ex.o"
+"robot_arm_car\stm32f1xx_hal_exti.o"
+"robot_arm_car\system_stm32f1xx.o"
+--strict --scatter "Robot_Arm_Car\Robot_Arm_Car.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Robot_Arm_Car.map" -o Robot_Arm_Car\Robot_Arm_Car.axf
