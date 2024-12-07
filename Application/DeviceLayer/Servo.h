@@ -2,6 +2,7 @@
 #define __SERVO_H
 
 #include "stm32f1xx_hal.h"
+#include "tim.h"
 
 #define BOTTOM_SERVO_MIDDLE_CCR							142
 #define BOTTOM_SERVO_LEFT_LIMIT_CCR					112
@@ -34,6 +35,10 @@ typedef struct
 	
 }servo_t;
 
-void Servo_Init(void);
-
+void Servo_Init(servo_t* servo);
+void Servo_FRONT_Degr_Set(servo_t* servo, uint16_t degr_ccr);
+void Servo_BOTTOM_Degr_Set(servo_t* servo, uint16_t degr_ccr);
+void Servo_LEFT_Degr_Set(servo_t* servo, uint16_t degr_ccr);
+void Servo_RIGHT_Degr_Set(servo_t* servo, uint16_t degr_ccr);
+	
 #endif
